@@ -1,0 +1,51 @@
+<p>bookride works!</p>
+<div class = "container">
+    <div class = "row">
+        <h6>Book a ride</h6>
+        <p>Pool car is a online application which you can either book or book through an app.</p>
+        <div>
+            <button type="button" class="btn btn-primary" (click) = "choose()">show all rides</button>
+            <div *ngIf = "isUse" >
+                <button type="button" class="btn btn-primary" (click)="rideList()">To office</button>
+                <button type="button" class="btn btn-primary">From office</button>
+                <button type="button" class="btn btn-primary">other</button>
+            </div>
+            <div  *ngIf = "isUse">
+              <table >
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>start</th>
+                        <th>End</th>
+                        <th>seats</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr appMouse *ngFor="let item of seatsList">
+                      <td>{{item.id}}</td>
+                        <td>{{ item.pickUp }}</td>
+                        <td>{{ item.destination }}</td>
+                        <td>{{ item.seatsLeft }}</td>
+                        <td>
+                            <button type="button" >Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            </div>
+         
+           
+
+            
+        </div>
+        &nbsp;
+        <div>
+            <button type="button" class="btn btn-primary">offer a ride</button>
+        </div>
+       
+    </div>
+
+<!-- <h1> Example of Toggle a Div on Click on a Button using Angular </h1>  
+<button (click)=toggleDisplayDivIf() >Toggle display Div If</button>  
+<div *ngIf="!isShowDivIf"> This Div If is from Javatpoint.com.</div>   -->
