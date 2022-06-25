@@ -1,0 +1,46 @@
+<p>ride works!</p>
+<html>
+ 
+<body>
+    
+    <table *ngIf="rideCount">
+        <h1>Ride details</h1>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>car</th>
+            <th>seats left</th>
+            <th>pickup point</th>
+            <th>destination</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td>menu</td>
+            <td>3</td>
+            <td>office</td>
+            <td>eastpoint</td>
+        </tr>
+        <!-- <tr>
+            <td>Arun</td>
+            <td>Singh</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Sam</td>
+            <td>Watson</td>
+            <td>41</td>
+        </tr> -->
+        <div >
+            <button (click)="bookRide()">book</button>
+            <div *ngIf="select">
+                <h1>booking done booking id :101</h1>
+                <button (click)= "cancelRide($event)">cancel ride</button>
+            </div>
+       
+        </div>
+       
+    </table>
+   
+</body>
+ 
+</html>

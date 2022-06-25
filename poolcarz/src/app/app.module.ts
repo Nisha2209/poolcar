@@ -8,6 +8,7 @@ import { MouseDirective } from './mouse.directive';
 import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RidefilterPipe } from './ridefilter.pipe';
+import { RideComponent } from './bookride/ride/ride.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { RidefilterPipe } from './ridefilter.pipe';
     MouseDirective,
     LoginComponent,
     RidefilterPipe,
+    RideComponent,
 
   ],
   imports: [
