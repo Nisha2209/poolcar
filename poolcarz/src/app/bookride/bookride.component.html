@@ -4,7 +4,7 @@
         <h6>Book a ride</h6>
         <p>Pool car is a online application which you can either book or book through an app.</p>
         <div>
-            <button type="button" class="btn btn-primary" (click) = "rideList()">show all rides</button>
+            <button type="button" class="btn btn-primary" (click) = "choose()">show all rides</button>
             <div *ngIf = "isUse" >
                 <button type="button" class="btn btn-primary" (click)="rideList('toOffice')">To office</button>
                 <button type="button" class="btn btn-primary"(click) ="rideList('fromOffice')" >From office</button>

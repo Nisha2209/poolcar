@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -7,7 +8,9 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  // loginForm :any ;
+ registerForm!: FormGroup; 
+ submitted!:boolean;
+  loginForm :any ;
   
  user = [
     {
@@ -23,7 +26,12 @@ export class LoginComponent implements OnInit {
   constructor( private formBuilder: FormBuilder,) { }
 
   ngOnInit(): void {
-  }
+    this.registerForm = this.formBuilder.group({
+    userName: ['', Validators.required],
+    password: ['', Validators.required],
+    })
+    }
+    
   loginUser(){
     if(this.user[0].userName == "nisha" && this.user[0].password == "nisha"){
       alert('login sucess')
